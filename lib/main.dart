@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:moniepoint_realestate/constants.dart';
+import 'package:moniepoint_realestate/favourites_page.dart';
+import 'package:moniepoint_realestate/messages_page.dart';
+import 'package:moniepoint_realestate/profile_page.dart';
 import 'package:moniepoint_realestate/search_page.dart';
 
 import 'home_page.dart';
@@ -63,10 +66,10 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
   static const TextStyle optionStyle = TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     SearchPage(),
+    MesssagesPage(),
     HomePage(),
-    Text('Index 2: School', style: optionStyle),
-    Text('Index 3: Church', style: optionStyle),
-    Text('Index 4: Cinema', style: optionStyle),
+    FavouritesPage(),
+    ProfilePage()
   ];
 
   void _onItemTapped(int index) {

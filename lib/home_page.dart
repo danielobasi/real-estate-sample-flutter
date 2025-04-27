@@ -1,5 +1,6 @@
 import 'package:countup/countup.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:moniepoint_realestate/constants.dart';
 
@@ -176,7 +177,59 @@ class _HomePageState extends State<HomePage> {
                                               "assets/images/list/list_img_1.png",
                                               width: double.infinity,
                                               height: 150,
-                                              fit: BoxFit.cover,)),
+                                              fit: BoxFit.cover,)
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomLeft,
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(vertical: defaultPadding / 2, horizontal: defaultPadding),
+                                            child: Container(
+                                              width: 35,
+                                              height: 35,
+                                              decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(20.0),
+                                                color: brandWhite300
+                                            ),
+                                              child: Center(
+                                                child:SvgPicture.asset("assets/images/icons/caret-right.svg", width: 8, height: 8,)
+                                              ),
+                                            ),
+                                          )
+                                        ).animate().moveX(delay: 100.ms, curve: Curves.linearToEaseOut).swap(builder: (_,child) => Align(
+                                          alignment: Alignment.bottomCenter,
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(defaultPadding / 2),
+                                            child: Container(
+                                              width: 300,
+                                              height: 40,
+                                              decoration: BoxDecoration(
+                                                  borderRadius: BorderRadius.circular(20.0),
+                                                  color: brandBeigeLight.withOpacity(0.8)
+                                            ),
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children: [
+                                                  const SizedBox(),
+                                                  Text("Gladkova St., 25", style: TextStyle(fontWeight: FontWeight.w600),),
+                                                  Container(
+                                                    width: 35,
+                                                    height: 35,
+                                                    decoration: BoxDecoration(
+                                                        borderRadius: BorderRadius.circular(20.0),
+                                                        color: brandWhite300
+                                                    ),
+                                                    child: Center(
+                                                        child:SvgPicture.asset("assets/images/icons/caret-right.svg", width: 8, height: 8,)
+                                                    ),
+                                                  )
+
+
+                                                ],
+                                              ),
+                                            ),
+                                          )
+                                        ).animate().fadeIn()
+                                        )
 
 
                                       ],
@@ -191,8 +244,8 @@ class _HomePageState extends State<HomePage> {
                                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
                                       SizedBox(
-                                        width: 150.0,
-                                        height: 150.0,
+                                        width: 160.0,
+                                        height: 300.0,
                                         child: Center(
                                           child: Stack(
                                             children: [
@@ -201,8 +254,43 @@ class _HomePageState extends State<HomePage> {
                                                   child: Image.asset(
                                                     "assets/images/list/list_img_2.png",
                                                     width: double.infinity,
-                                                    height: 150,
-                                                    fit: BoxFit.cover,)),
+                                                    height: 300,
+                                                    fit: BoxFit.cover,)
+                                              ),
+                                              Align(
+                                                  alignment: Alignment.bottomCenter,
+                                                  child: Padding(
+                                                    padding: const EdgeInsets.all(defaultPadding / 2),
+                                                    child: Container(
+                                                      width: 130,
+                                                      height: 40,
+                                                      decoration: BoxDecoration(
+                                                          borderRadius: BorderRadius.circular(20.0),
+                                                          color: brandBeigeLight.withOpacity(0.8)
+                                                      ),
+                                                      child: Row(
+                                                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                        children: [
+                                                          const SizedBox(),
+                                                          Text("Gubina St.,11", style: TextStyle(fontWeight: FontWeight.w600),),
+                                                          Container(
+                                                            width: 35,
+                                                            height: 35,
+                                                            decoration: BoxDecoration(
+                                                                borderRadius: BorderRadius.circular(20.0),
+                                                                color: brandWhite200
+                                                            ),
+                                                            child: Center(
+                                                                child:SvgPicture.asset("assets/images/icons/caret-right.svg", width: 8, height: 8,)
+                                                            ),
+                                                          )
+
+
+                                                        ],
+                                                      ),
+                                                    ),
+                                                  )
+                                              )
 
 
                                             ],
@@ -210,25 +298,120 @@ class _HomePageState extends State<HomePage> {
                                         ),
 
                                       ),
-                                      SizedBox(
-                                        width: 150.0,
-                                        height: 150.0,
-                                        child: Center(
-                                          child: Stack(
-                                            children: [
-                                              ClipRRect(
-                                                  borderRadius: BorderRadius.circular(20.0),
-                                                  child: Image.asset(
-                                                    "assets/images/list/list_img_3.png",
-                                                    width: double.infinity,
-                                                    height: 150,
-                                                    fit: BoxFit.cover,)),
+                                      Column(
+                                        children: [
+                                          SizedBox(
+                                            width: 160.0,
+                                            height: 150.0,
+                                            child: Center(
+                                              child: Stack(
+                                                children: [
+                                                  ClipRRect(
+                                                      borderRadius: BorderRadius.circular(20.0),
+                                                      child: Image.asset(
+                                                        "assets/images/list/list_img_3.png",
+                                                        width: double.infinity,
+                                                        height: 150,
+                                                        fit: BoxFit.cover,)
+                                                  ),
+                                                  Align(
+                                                      alignment: Alignment.bottomCenter,
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.all(defaultPadding / 2),
+                                                        child: Container(
+                                                          width: 145,
+                                                          height: 40,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.circular(20.0),
+                                                              color: brandBeigeLight.withOpacity(0.8)
+                                                          ),
+                                                          child: Row(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            children: [
+                                                              const SizedBox(),
+                                                              Text("Trefoleva St.,43", style: TextStyle(fontWeight: FontWeight.w600),),
+                                                              Container(
+                                                                width: 35,
+                                                                height: 35,
+                                                                decoration: BoxDecoration(
+                                                                    borderRadius: BorderRadius.circular(20.0),
+                                                                    color: brandWhite200
+                                                                ),
+                                                                child: Center(
+                                                                    child:SvgPicture.asset("assets/images/icons/caret-right.svg", width: 8, height: 8,)
+                                                                ),
+                                                              )
 
 
-                                            ],
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+
+
+                                                ],
+                                              ),
+                                            ),
+
                                           ),
-                                        ),
+                                          const SizedBox(height: defaultPadding ),
+                                          SizedBox(
+                                            width: 160.0,
+                                            height: 160.0,
+                                            child: Center(
+                                              child: Stack(
+                                                children: [
+                                                  ClipRRect(
+                                                      borderRadius: BorderRadius.circular(20.0),
+                                                      child: Image.asset(
+                                                        "assets/images/list/list_img_4.png",
+                                                        width: double.infinity,
+                                                        height: 150,
+                                                        fit: BoxFit.cover,)
+                                                  ),
+                                                  Align(
+                                                      alignment: Alignment.bottomCenter,
+                                                      child: Padding(
+                                                        padding: const EdgeInsets.all(defaultPadding / 2),
+                                                        child: Container(
+                                                          width: 130,
+                                                          height: 35,
+                                                          decoration: BoxDecoration(
+                                                              borderRadius: BorderRadius.circular(20.0),
+                                                              color: brandBeigeLight.withOpacity(0.6)
+                                                          ),
+                                                          child: Row(
+                                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                            children: [
+                                                              const SizedBox(),
+                                                              Text("Sedova St.,22", style: TextStyle(fontWeight: FontWeight.w600),),
+                                                              Container(
+                                                                width: 35,
+                                                                height: 35,
+                                                                decoration: BoxDecoration(
+                                                                    borderRadius: BorderRadius.circular(20.0),
+                                                                    color: brandWhite200
+                                                                ),
+                                                                child: Center(
+                                                                    child:SvgPicture.asset("assets/images/icons/caret-right.svg", width: 8, height: 8,)
+                                                                ),
+                                                              )
 
+
+                                                            ],
+                                                          ),
+                                                        ),
+                                                      )
+                                                  )
+
+
+                                                ],
+                                              ),
+                                            ),
+
+                                          ),
+                                        ],
                                       )
 
                                     ],
