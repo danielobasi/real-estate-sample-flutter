@@ -30,44 +30,54 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          width: 140,
-                          height: 35,
-                          decoration: BoxDecoration(
-                              color: brandWhite200,
-                              borderRadius: BorderRadius.circular(5.0)
-                          ),
-                          child: Center(
-                            child: Row(
-                              children: [
-                                SvgPicture.asset("assets/images/icons/map-pin-fill.svg", width: 18, height: 18, color: brandBeige,),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: defaultPadding / 4),
-                                  child: Text("Saint Petersburg", style: TextStyle(color: brandBeige, fontWeight: FontWeight.normal),),
-                                )
-                              ],
+                        Animate(
+                          effects: [ScaleEffect(duration: 600.ms)],
+                          child: Container(
+                            width: 140,
+                            height: 35,
+                            decoration: BoxDecoration(
+                                color: brandWhite200,
+                                borderRadius: BorderRadius.circular(5.0)
                             ),
-                          ),
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  SvgPicture.asset("assets/images/icons/map-pin-fill.svg", width: 18, height: 18, color: brandBeige,),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: defaultPadding / 4),
+                                    child: Text("Saint Petersburg", style: TextStyle(color: brandBeige, fontWeight: FontWeight.normal),),
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
                         ),
-                        Padding(
-                          padding: const EdgeInsets.only(right: defaultPadding),
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(20.0),
-                              child: Image.asset("assets/images/avatar.png", width: 40, height: 40,
-                              )
+
+                        Animate(
+                          effects: [ScaleEffect(delay: 200.ms,duration: 900.ms)],
+                          child: Padding(
+                            padding: const EdgeInsets.only(right: defaultPadding),
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20.0),
+                                child: Image.asset("assets/images/avatar.png", width: 40, height: 40,
+                                )
+                            ),
                           ),
                         )
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: defaultPadding,bottom: defaultPadding),
-                    child: Text("Hi, Marina",style: TextStyle(color: brandBeige, fontSize: 24, fontWeight: FontWeight.normal)),
+                  Animate(
+                    effects: [FadeEffect(delay: 400.ms,duration: 200.ms)],
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: defaultPadding,bottom: defaultPadding),
+                      child: Text("Hi, Marina",style: TextStyle(color: brandBeige, fontSize: 24, fontWeight: FontWeight.normal)),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: defaultPadding),
                     child: Text("let's select your\nperfect place",style: TextStyle(color: brandBlack, fontSize: 32, fontWeight: FontWeight.normal)),
-                  ),
+                  ).animate().fadeIn(delay: 900.ms),
                   SizedBox(
                     height: defaultPadding,
                   ),
@@ -104,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                               ],
                             ),
                           ),
-                        ),
+                        ).animate().scale(delay: 900.ms,duration: 900.ms),
                         Container(
                             width: 150.0,
                             height: 150.0,
@@ -133,7 +143,7 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                             )
-                        )
+                        ).animate().scale(delay: 900.ms,duration: 900.ms)
                       ],
                     ),
                   ),
