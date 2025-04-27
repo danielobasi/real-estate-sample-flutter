@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:moniepoint_realestate/constants.dart';
+import 'package:moniepoint_realestate/search_page.dart';
+
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -74,16 +78,18 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('BottomNavigationBar Sample')),
+      //appBar: AppBar(title: const Text('BottomNavigationBar Sample')),
+      extendBody: true,
+
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.fromLTRB(40, 20, 40, 40),
+        padding: const EdgeInsets.fromLTRB(40, 0, 40, 15),
         child: SizedBox(
           height: 66,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(40),
             child: BottomNavigationBar(
-              backgroundColor: Colors.black54,
+              backgroundColor: brandBlack,
               type: BottomNavigationBarType.fixed,
               selectedFontSize: 0,
               unselectedFontSize: 0,
@@ -231,31 +237,7 @@ class _BottomNavigationBarExampleState extends State<BottomNavigationBarExample>
     );
   }
 }
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
 
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
 
-class SearchPage extends StatefulWidget {
-  const SearchPage({super.key});
-
-  @override
-  State<SearchPage> createState() => _SearchPageState();
-}
-
-class _SearchPageState extends State<SearchPage> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
 
