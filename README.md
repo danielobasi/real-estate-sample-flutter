@@ -1,16 +1,12 @@
-# moniepoint_realestate
+# Real Estate
 
-A new Flutter project.
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This project is a sample implementation of a real estate app UI design by Kristina Spiridonova.
 
-A few resources to get you started if this is your first Flutter project:
+Check out the UI design on Dribbble:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [Real Estate App](https://dribbble.com/shots/23780608-Real-Estate-App)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
